@@ -1,0 +1,13 @@
+<main class="" id="app" v-pan="onPan">
+	<div class="emoji" ref="emoji">{{ selectedContent }}</div>
+	<section class="slider">
+		<ul class="slider__list" ref="list">
+			<li v-for="(animal, index) in animals" :key="animal"
+					class="slider__item" 
+					v-tap="(e) => onTap(e, animal)"
+					:style="{backgroundColor: colors[index]}">
+				{{ animal }}
+			</li>
+		</ul>
+	</section>
+</main>
